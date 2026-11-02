@@ -26,7 +26,10 @@
   <main id="app-main">
     <section id="browse-panel">
       <div class="panel-header">
-        <h2>Browse <span id="browse-count"></span></h2>
+        <div class="panel-title-row">
+          <h2>Browse Interventions <span id="browse-count"></span></h2>
+        </div>
+        <p class="panel-instruction">Browse interventions and click "Consider" for items that look promising.</p>
         <input type="search" id="search-input" placeholder="Search interventions..." />
         <div id="domain-filters" class="domain-filters"></div>
         <div id="bcw-filters" class="bcw-filters"></div>
@@ -36,10 +39,13 @@
 
     <section id="consider-panel">
       <div class="panel-header">
-        <h2>Considering <span id="consider-count"></span></h2>
-        <div class="export-bar">
-          <button id="btn-export">Copy to clipboard</button>
+        <div class="panel-title-row">
+          <h2>Considering Interventions <span id="consider-count"></span></h2>
+          <div class="export-bar">
+            <button id="btn-export">Copy to clipboard</button>
+          </div>
         </div>
+        <p class="panel-instruction">Do a deeper dive on the interventions that look promising. Are they a good fit? What assumptions do they reveal?</p>
       </div>
       <div id="consider-nav" class="consider-nav"></div>
       <div id="consider-list" class="card-list"></div>
