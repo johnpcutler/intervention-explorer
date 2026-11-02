@@ -11,6 +11,7 @@
     <div class="header-top">
       <h1>Intervention Explorer</h1>
       <div class="session-controls">
+        <button id="btn-help" class="help-btn" title="How to use this tool">?</button>
         <select id="session-select" title="Switch session"></select>
         <button id="btn-new-session" title="New session">+ New</button>
         <button id="btn-delete-session" class="danger" title="Delete this session">Delete</button>
@@ -54,6 +55,41 @@
       </div>
     </section>
   </main>
+
+  <div id="help-overlay" class="help-overlay" style="display:none">
+    <div class="help-modal">
+      <button id="help-close" class="help-close">&times;</button>
+      <h2>How to use Intervention Explorer</h2>
+      <p class="help-philosophy">
+        We spend a lot of time trying to define problems. But sometimes discussing potential actions is the best way to surface our core assumptions and spark the conversations that matter.
+      </p>
+      <p class="help-philosophy">
+        Instead of starting with a perfect diagnosis, start by reacting to possible interventions. What resonates? What feels wrong? Your reactions <em>are</em> the diagnosis.
+      </p>
+      <ol class="help-steps">
+        <li>
+          <strong>Define what you're seeing.</strong>
+          Describe a gap, problem, opportunity, desired intervention, or ideal future state. It doesn't need to be precise — that's what the rest of this process is for.
+        </li>
+        <li>
+          <strong>Browse the interventions.</strong>
+          Scan the 102 interventions on the left. Search by keyword, filter by domain or change mechanism. See what catches your eye.
+        </li>
+        <li>
+          <strong>Add promising items to your consideration set.</strong>
+          Click "+ Consider" on anything that looks relevant. Don't overthink it — you can always remove items later.
+        </li>
+        <li>
+          <strong>Engage with each consideration.</strong>
+          Read the full detail. Notice the assumption it reveals — what are you betting the real problem is? Check the "What if..." challenges. Rate fit (1–5) and add notes about your thinking.
+        </li>
+        <li>
+          <strong>Export and discuss.</strong>
+          Copy your consideration set to share with your team. The best insights often come from discussing <em>why</em> certain interventions feel right or wrong.
+        </li>
+      </ol>
+    </div>
+  </div>
 
   <script src="app.js"></script>
 </body>

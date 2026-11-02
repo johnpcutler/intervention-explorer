@@ -628,6 +628,18 @@ async function init() {
   document.getElementById("session-select").addEventListener("change", handleSessionSwitch);
   document.getElementById("btn-export").addEventListener("click", exportToClipboard);
 
+  // Help overlay
+  const helpOverlay = document.getElementById("help-overlay");
+  document.getElementById("btn-help").addEventListener("click", () => {
+    helpOverlay.style.display = "flex";
+  });
+  document.getElementById("help-close").addEventListener("click", () => {
+    helpOverlay.style.display = "none";
+  });
+  helpOverlay.addEventListener("click", (e) => {
+    if (e.target === helpOverlay) helpOverlay.style.display = "none";
+  });
+
   renderAll();
 }
 
