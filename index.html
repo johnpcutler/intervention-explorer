@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Intervention Explorer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header id="app-header">
+    <div class="header-top">
+      <h1>Intervention Explorer</h1>
+      <div class="session-controls">
+        <select id="session-select" title="Switch session"></select>
+        <button id="btn-new-session" title="New session">+ New</button>
+        <button id="btn-delete-session" class="danger" title="Delete this session">Delete</button>
+        <button id="btn-clear-all" class="danger" title="Clear all sessions">Clear All</button>
+      </div>
+    </div>
+    <div class="problem-area">
+      <label for="problem-input">What are you seeing? What's the gap, problem, or opportunity?</label>
+      <textarea id="problem-input" rows="2" placeholder="Describe what you're observing in your team..."></textarea>
+    </div>
+  </header>
+
+  <main id="app-main">
+    <section id="browse-panel">
+      <div class="panel-header">
+        <h2>Browse <span id="browse-count"></span></h2>
+        <input type="search" id="search-input" placeholder="Search interventions..." />
+        <div id="domain-filters" class="domain-filters"></div>
+        <div id="bcw-filters" class="bcw-filters"></div>
+      </div>
+      <div id="browse-list" class="card-list"></div>
+    </section>
+
+    <section id="consider-panel">
+      <div class="panel-header">
+        <h2>Considering <span id="consider-count"></span></h2>
+        <div class="export-bar">
+          <button id="btn-export">Copy to clipboard</button>
+        </div>
+      </div>
+      <div id="consider-nav" class="consider-nav"></div>
+      <div id="consider-list" class="card-list"></div>
+      <div id="consider-empty" class="empty-state">
+        Click <strong>+ Consider</strong> on items from the browse panel to start building your intervention set.
+      </div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
